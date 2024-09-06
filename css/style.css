@@ -1,5 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #3498db;
-  color: white;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+a {
+  color: #6366F1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6366F1;
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

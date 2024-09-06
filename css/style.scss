@@ -1,7 +1,41 @@
-$primary-color: #3498db;
+// SCSS-variabler
+$color-dark: #0B0F19;
+$color-primary: #6366F1;
+$color-secondary: #EFF2FC;
+$color-gray: #9397AD;
+$color-white: #fff;
+$color-gradient: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
 
+$container-padding: 1rem;
+$transition-item: all 0.2s;
+
+// Globala stilar
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+// Body-stil
 body {
-    font-family: Arial, sans-serif;
-    background-color: $primary-color;
-    color: white;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    background-color: $color-white ;
+}
+
+// Länkar (a)
+a {
+    color: $color-primary; // SCSS-variabeln direkt, utan var()
+    text-decoration: none;
+}
+
+// Länkar (a)
+a:hover {
+    color: $color-primary; // SCSS-variabeln direkt, utan var()
+    text-decoration: underline;
 }
