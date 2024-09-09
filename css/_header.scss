@@ -1,0 +1,197 @@
+// SCSS-variabler
+$color-dark: #0B0F19;
+$color-primary: #6366F1;
+$color-secondary: #EFF2FC;
+$color-gray: #9397AD;
+$color-white: #fff;
+$color-gradient: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
+
+$container-padding: 1rem;
+$transition-item: all 0.2s;
+
+// Globala stilar
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgb(0, 0, 0);
+}
+
+// Body-stil
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    background-color: $color-white;
+}
+
+// Länkar
+a {
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Header och navigering
+header {
+    .container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr auto auto;
+        gap: 1.5rem;
+        padding: 1rem 0;
+
+        @media (min-width: 768px) {
+            gap: 3rem;
+        }
+
+        @media (min-width: 1400px) {
+            grid-template-columns: auto 1fr auto auto;
+            gap: 2rem;
+        }
+    }
+
+    .nav-link {
+        color: $color-dark;
+        font-weight: 500;
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+
+    .navbar {
+        display: none;
+
+        @media (min-width: 1400px) {
+            display: block;
+        }
+    }
+
+    .btn-mobile {
+        background-color: transparent;
+        border: none;
+        font-size: 2rem;
+
+        @media (min-width: 1400px) {
+            display: none;
+        }
+    }
+
+    #auth-signin {
+        display: none;
+
+        @media (min-width: 1400px) {
+            display: block;
+        }
+    }
+}
+
+// Primärknappar
+.btn-primary {
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 8px;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $color-gray;
+    }
+
+    i {
+        margin-right: 0.5rem;
+    }
+}
+
+// Toggle-switch
+.btn-toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .label {
+        display: none;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+    }
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-gray;
+        transition: all 0.2s;
+
+        &::before {
+            content: "";
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            left: 3px;
+            bottom: 2.5px;
+            background-color: $color-white;
+            transition: all 0.2s;
+        }
+
+        &.round {
+            border-radius: 35px;
+
+            &::before {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    input:checked + .slider::before {
+        transform: translateX(20px);
+    }
+
+    input:checked + .slider {
+        background-color: $color-primary;
+    }
+}
+
+// Containrar
+.container {
+    width: 100%;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 1400px) {
+        max-width: 1320px;
+    }
+}
