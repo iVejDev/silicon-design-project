@@ -14,6 +14,12 @@ body {
   background-color: #fff;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
 a {
   color: #6366F1;
   text-decoration: none;
@@ -164,5 +170,26 @@ header #auth-signin {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+footer {
+  font-size: 14px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #9397AD;
+}
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+footer .credit {
+  display: none;
+}
+@media (min-width: 768px) {
+  footer .credit {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

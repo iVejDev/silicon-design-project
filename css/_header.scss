@@ -27,6 +27,12 @@ body {
     background-color: $color-white;
 }
 
+.wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
 // Länkar
 a {
     color: $color-primary;
@@ -195,3 +201,4 @@ header {
         max-width: 1320px;
     }
 }
+

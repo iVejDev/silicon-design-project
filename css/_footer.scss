@@ -1,0 +1,29 @@
+$color-gray: #9397AD;
+
+
+footer {
+    font-size: 14px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: $color-gray;
+  
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    // Döljer .credit i mobilt läge (default)
+    .credit {
+      display: none; // 
+    }
+  
+    // Media query för större skärmar
+    @media (min-width: 768px) {
+      .credit {
+        display: block; // Visar .credit endast på skärmar som är 768px eller större
+      }
+    }
+  }
+  
