@@ -173,6 +173,35 @@ header #auth-signin {
   }
 }
 
+#brands {
+  padding: 2rem 0;
+  display: none;
+}
+#brands .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+#brands .brand-box {
+  border: 1px solid #E2E5F1;
+  border-radius: 8px;
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#brands .brand-box:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  #brands {
+    display: flex;
+  }
+}
 footer {
   font-size: 14px;
   padding-top: 1rem;

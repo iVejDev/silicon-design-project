@@ -1,0 +1,44 @@
+// Variabler
+$color-gray: #9397AD;
+$color-border-gray: #E2E5F1; // Rätt variabelnamn
+
+// Sektion för Brands
+#brands {
+    padding: 2rem 0;
+    display: none; // Dölj brands-sektionen i mobilt läge
+
+    // Justerar containern
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap; // Gör att brands radas upp snyggt
+    }
+
+    // Stilar för varje brand-box
+    .brand-box {
+         border: 1px solid $color-border-gray; // Använder färgvariabel
+         border-radius: 8px;
+         height: 100px;
+         width: 200px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+
+        &:hover {
+            transform: scale(1.05); // Zooma in vid hover
+        }
+    }
+}
+
+// Media queries för större skärmar
+@media (min-width: 768px) {
+    #brands {
+        display: flex; // Visa brands-sektionen vid skärmar större än 768px
+    }
+    
+}
+
+
