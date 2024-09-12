@@ -57,7 +57,7 @@
       "headline"
       "content";
 
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1400px) {
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
         "headline headline"
@@ -72,6 +72,8 @@
         "content images";
     }
   }
+}
+
 
   .headline {
     grid-area: headline;
@@ -156,42 +158,56 @@
     grid-area: images;
     display: none;
     margin-left: 2rem;
-
+  
     @media (min-width: 768px) {
       display: block;
     }
-
+  
     .img-back {
       position: absolute;
       z-index: -10;
       bottom: 0;
       right: 150px; // Flytta närmare texten
       width: 55%; // Justera bredd för bättre balans
-      height: auto; 
+      height: auto;
     }
-
+  
     .img-front {
       position: absolute;
       z-index: -5;
-      bottom: 0; 
+      bottom: 0;
       right: 30px; // Flytta närmare den bakre telefonen
       width: 50%; // Justera bredd för bättre balans
-      height: auto; 
+      height: auto;
     }
-
+  
+    // Justeringar specifikt för iPad (768px - 1400px)
+    @media (min-width: 768px) and (max-width: 1400px) {
+      .img-back {
+        width: 70%; // Öka storleken på bakre telefonen
+        right: 50px; // Justera placeringen närmare texten
+      }
+  
+      .img-front {
+        width: 65%; // Öka storleken på främre telefonen
+        right: 20px; // Justera placeringen för att matcha
+      }
+    }
+  
     @media (min-width: 1400px) {
       .img-back {
         bottom: -50px;
         right: 180px; // Justera positionen för större skärmar
       }
-
+  
       .img-front {
         bottom: -50px;
         right: 60px; // Justera positionen för större skärmar
       }
     }
   }
-}
+  
+
 
   
   

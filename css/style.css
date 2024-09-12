@@ -220,7 +220,7 @@ header #auth-signin {
   grid-template-columns: 1fr;
   grid-template-areas: "headline" "content";
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1400px) {
   #hero .container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "headline headline" "content images";
@@ -233,49 +233,51 @@ header #auth-signin {
     grid-template-areas: "headline images" "content images";
   }
 }
-#hero .headline {
+
+.headline {
   grid-area: headline;
   text-align: center;
 }
-#hero .headline h1 {
+.headline h1 {
   font-size: 34px;
   font-weight: 800;
 }
 @media (min-width: 768px) {
-  #hero .headline h1 {
+  .headline h1 {
     font-size: 56px;
   }
 }
 @media (min-width: 1400px) {
-  #hero .headline h1 {
+  .headline h1 {
     text-align: left;
   }
 }
-#hero .content {
+
+.content {
   grid-area: content;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #hero .content {
+  .content {
     text-align: left;
   }
 }
-#hero .content p {
+.content p {
   font-size: 18px;
   margin-bottom: 2rem;
 }
-#hero .content .buttons {
+.content .buttons {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 3rem;
 }
 @media (min-width: 1400px) {
-  #hero .content .buttons {
+  .content .buttons {
     flex-direction: row;
   }
 }
-#hero .content .buttons .btn-download-app {
+.content .buttons .btn-download-app {
   background-color: #0B0F19;
   color: #fff;
   border-radius: 8px;
@@ -285,12 +287,12 @@ header #auth-signin {
   align-items: center;
   text-decoration: none;
 }
-#hero .content .buttons .btn-download-app:hover {
+.content .buttons .btn-download-app:hover {
   background-color: #6366F1;
   color: #fff;
   text-decoration: none;
 }
-#hero .content .discover-more {
+.content .discover-more {
   color: #0B0F19;
   display: flex;
   align-items: center;
@@ -299,28 +301,29 @@ header #auth-signin {
   margin-top: 2rem;
 }
 @media (min-width: 768px) {
-  #hero .content .discover-more {
+  .content .discover-more {
     justify-content: flex-start;
     margin-bottom: 2rem;
   }
 }
 @media (min-width: 1400px) {
-  #hero .content .discover-more {
+  .content .discover-more {
     margin-top: 10rem;
   }
 }
-#hero .images {
+
+.images {
   position: relative;
   grid-area: images;
   display: none;
   margin-left: 2rem;
 }
 @media (min-width: 768px) {
-  #hero .images {
+  .images {
     display: block;
   }
 }
-#hero .images .img-back {
+.images .img-back {
   position: absolute;
   z-index: -10;
   bottom: 0;
@@ -328,7 +331,7 @@ header #auth-signin {
   width: 55%;
   height: auto;
 }
-#hero .images .img-front {
+.images .img-front {
   position: absolute;
   z-index: -5;
   bottom: 0;
@@ -336,12 +339,22 @@ header #auth-signin {
   width: 50%;
   height: auto;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .images .img-back {
+    width: 70%;
+    right: 50px;
+  }
+  .images .img-front {
+    width: 65%;
+    right: 20px;
+  }
+}
 @media (min-width: 1400px) {
-  #hero .images .img-back {
+  .images .img-back {
     bottom: -50px;
     right: 180px;
   }
-  #hero .images .img-front {
+  .images .img-front {
     bottom: -50px;
     right: 60px;
   }
