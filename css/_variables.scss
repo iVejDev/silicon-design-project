@@ -3,8 +3,17 @@ $color-dark: #0B0F19;
 $color-primary: #6366F1;
 $color-secondary: #EFF2FC;
 $color-gray: #9397AD;
+$color-light-gray: #565973;
+$color-border-gray: #9397AD; // Example value
+
+
 $color-white: #fff;
-$color-gradient: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
+$color-gradient1: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
+
 
 $container-padding: 1rem;
 $transition-item: all 0.2s;
+$padding-large: 2rem;
+$padding-medium: 1rem;
+$font-size-main: 2rem;
+$font-size-subtext: 1.2rem;

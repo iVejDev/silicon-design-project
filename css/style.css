@@ -185,7 +185,7 @@ header #auth-signin {
   flex-wrap: wrap;
 }
 #brands .brand-box {
-  border: 1px solid #E2E5F1;
+  border: 1px solid #9397AD;
   border-radius: 8px;
   height: 100px;
   width: 200px;
@@ -202,6 +202,207 @@ header #auth-signin {
     display: flex;
   }
 }
+#hero {
+  background: rgb(99, 102, 241);
+  background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+  padding-bottom: 2rem;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  #hero {
+    padding-bottom: 0;
+  }
+}
+#hero .container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "headline" "content";
+}
+@media (min-width: 768px) {
+  #hero .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "headline headline" "content images";
+  }
+}
+@media (min-width: 1400px) {
+  #hero .container {
+    gap: 2rem;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas: "headline images" "content images";
+  }
+}
+#hero .headline {
+  grid-area: headline;
+  text-align: center;
+}
+#hero .headline h1 {
+  font-size: 34px;
+  font-weight: 800;
+}
+@media (min-width: 768px) {
+  #hero .headline h1 {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1400px) {
+  #hero .headline h1 {
+    text-align: left;
+  }
+}
+#hero .content {
+  grid-area: content;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #hero .content {
+    text-align: left;
+  }
+}
+#hero .content p {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+#hero .content .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 1400px) {
+  #hero .content .buttons {
+    flex-direction: row;
+  }
+}
+#hero .content .buttons .btn-download-app {
+  background-color: #0B0F19;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+#hero .content .buttons .btn-download-app:hover {
+  background-color: #6366F1;
+  color: #fff;
+  text-decoration: none;
+}
+#hero .content .discover-more {
+  color: #0B0F19;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  #hero .content .discover-more {
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  #hero .content .discover-more {
+    margin-top: 10rem;
+  }
+}
+#hero .images {
+  position: relative;
+  grid-area: images;
+  display: none;
+  margin-left: 2rem;
+}
+@media (min-width: 768px) {
+  #hero .images {
+    display: block;
+  }
+}
+#hero .images .img-back {
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+  right: 150px;
+  width: 55%;
+  height: auto;
+}
+#hero .images .img-front {
+  position: absolute;
+  z-index: -5;
+  bottom: 0;
+  right: 30px;
+  width: 50%;
+  height: auto;
+}
+@media (min-width: 1400px) {
+  #hero .images .img-back {
+    bottom: -50px;
+    right: 180px;
+  }
+  #hero .images .img-front {
+    bottom: -50px;
+    right: 60px;
+  }
+}
+
+.faqs-container {
+  box-shadow: 0 4px 8px -3px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  margin: 0 auto;
+}
+.faqs-container .content {
+  padding: 0 32px;
+  background-color: #fdfffc;
+  line-height: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease;
+}
+.faqs-container .content.active {
+  max-height: 600px;
+}
+.faqs-container h2 {
+  padding: 4px 32px;
+  font-size: 28px;
+}
+.faqs-container h3 {
+  font-size: 20px;
+  padding: 0 32px;
+}
+.faqs-container .faq-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.faqs-container .open,
+.faqs-container .close {
+  position: absolute;
+  right: 0;
+  padding: 0 32px;
+  font-size: 22px;
+  font-weight: bold;
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: all 500ms;
+}
+.faqs-container .open.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.faqs-container .close.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.faqs-container .open {
+  opacity: 1;
+}
+.faqs-container .close.active {
+  opacity: 0;
+}
+
 footer {
   font-size: 14px;
   padding-top: 1rem;
