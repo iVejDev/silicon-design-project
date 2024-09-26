@@ -1,14 +1,42 @@
-// SCSS-variabler
-$color-dark: #0B0F19;
-$color-primary: #6366F1;
-$color-secondary: #EFF2FC;
-$color-gray: #9397AD;
-$color-light-gray: #565973;
-$color-border-gray: #9397AD; // Example value
+// Light Mode Colors
+$color-dark: #0B0F19; // dark text for light mode
+$color-primary: #6366F1; // main brand color
+$color-secondary: #EFF2FC; // light background
+$color-gray: #9397AD; // muted text color
+$color-light-gray: #565973; // lighter gray for borders or secondary elements
+$color-border-gray: #9397AD; // border color for light mode
 
+$color-white: #fff; // white background
+$color-gradient1: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%); // gradient
 
-$color-white: #fff;
-$color-gradient1: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
+// Dark Mode Colors
+$color-dark-bg: #0B0F19; // dark background color for dark mode
+$color-primary-dark: #6366F1; // same primary color in dark mode
+$color-secondary-dark: #1F2937; // darker secondary background
+$color-gray-dark: #6b7280; // muted text in dark mode
+$color-light-gray-dark: #4b5563; // even lighter gray for borders in dark mode
+$color-border-gray-dark: #374151; // dark border in dark mode
+$color-background-dark: #111827; // dark mode background
+
+$color-white-dark: #fff; // dark theme "white" for areas needing contrast with pure dark
+$color-gradient1-dark: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%); // keep gradient same for now
+
+// Define mode-dependent colors (Light/Dark Mode)
+$color-background-current: $color-white; // starts with light mode
+$color-text-current: $color-dark; // dark text for light mode
+$color-secondary-current: $color-secondary; // light background initially
+$color-border-current: $color-border-gray; // light mode border
+$color-muted-text-current: $color-gray; // muted text in light mode
+$color-gradient-current: $color-gradient1; // gradient
+
+// Dark Mode Variables to Switch
+$color-background-dark-current: $color-dark-bg;
+$color-text-dark-current: $color-white-dark;
+$color-secondary-dark-current: $color-secondary-dark;
+$color-border-dark-current: $color-border-gray-dark;
+$color-muted-text-dark-current: $color-gray-dark;
+$color-gradient-dark-current: $color-gradient1-dark;
+
 
 
 $container-padding: 1rem;

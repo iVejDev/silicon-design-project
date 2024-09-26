@@ -1,3 +1,15 @@
+body {
+  background-color: $color-background-current;
+  color: $color-text-current;
+}
+
+[data-theme='dark'] {
+  body {
+    background-color: $color-background-dark-current; // Dark mode background
+    color: $color-text-dark-current; // Dark mode text color
+  }
+}
+
 
 // Sektion för Brands
 #brands {
@@ -135,6 +147,7 @@
     }
 
     .discover-more {
+      
       color: $color-dark;
       display: flex;
       align-items: center;
@@ -232,7 +245,7 @@
           text-align: center;
           h1 {
             font-size: 24px;
-            color: $color-dark;
+            color: #0B0F19;
           }
           p {
             font-size: 16px;
@@ -326,6 +339,7 @@
             text-align: left;
             h1 {
               font-size: 36px;
+              
             }
           }
   
@@ -343,6 +357,7 @@
                 h5 {
                   font-size: 20px;
                   margin: 0;
+                  
                 }
                 p {
                   font-size: 16px;
@@ -363,19 +378,882 @@
 
 
   
-  
 
-  
-  
+/* Grundläggande styling för sektionen */
+.how-it-works {
  
 
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+
+    // Styling för rubriken
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 5.3rem;
+    }
+
+    // Styling för bilder och steg
+    .step-images {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      gap: 5.3rem;
+
+      // Visa endast desktop-bilder i desktop-läge
+      .desktop-image {
+        display: block;
+        height: auto;
+        width: auto;
+      }
+
+      // Döljer tablet och mobil-bilder i desktop-läge
+      .tablet-image,
+      .mobile-image {
+        display: none;
+      }
+    }
+
+    // Visa endast desktop-text i desktop-läge
+    .desktop-text {
+      display: block;
+    }
+
+    // Döljer tablet- och mobilbeskrivningar i desktop-läge
+    .tablet-text,
+    .mobile-text {
+      display: none;
+    }
+
+    .step-description {
+      text-align: center;
+      margin: auto;
+      padding-bottom: 6.5rem;
+      padding-top: 3.1rem;
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #7a7a7a;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+/* Media Queries för tablet-läge (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .how-it-works {
+    .container {
+      padding: 0 15px;
+
+      .section-title {
+        font-size: 2rem; /* Mindre rubrik för tablet */
+        padding: 4rem;
+      }
+
+      .step-images {
+        display: flex;
+        flex-direction: row; /* Ändra till radvis layout */
+        justify-content: space-evenly; /* Distribute space evenly between the images */
+        align-items: center;
+        gap: 1rem; /* Justera mellanrummet mellan bilderna */
+        margin-bottom: 30px;
+
+        // Visa endast tablet-bilder i tablet-läge
+        .tablet-image {
+          display: block;
+          width: 25%; /* Justera bredden för att passa tre bilder */
+          height: auto;
+        }
+
+        .desktop-image,
+        .mobile-image {
+          display: none;
+        }
+      }
+
+      // Visa endast tablet-text i tablet-läge
+      .tablet-text {
+        display: block;
+      }
+
+      // Döljer desktop- och mobilbeskrivningar i tablet-läge
+      .desktop-text,
+      .mobile-text {
+        display: none;
+      }
+
+      .step-description {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        max-width: 600px;
+
+        h3 {
+          font-size: 1.6rem;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 0.9rem;
+          max-width: 350px;
+        }
+      }
+    }
+  }
+}
 
 
+/* Media Queries för mobil-läge (max-width: 767px) */
+@media (max-width: 767px) {
+  .how-it-works {
+    .container {
+      padding: 0 10px;
+
+      .section-title {
+        font-size: 1.8rem; /* Mindre rubrik för mobil */
+        padding: 3rem;
+      }
+
+      .step-images {
+        display: flex;
+        flex-direction: column; /* Bilder staplas vertikalt i mobil-läge */
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 20px;
+
+        // Visa endast mobil-bilder i mobil-läge
+        .mobile-image {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .desktop-image,
+        .tablet-image {
+          display: none;
+        }
+      }
+
+      // Visa endast mobil-text i mobil-läge
+      .mobile-text {
+        display: block;
+      }
+
+      // Döljer desktop- och tabletbeskrivningar i mobil-läge
+      .desktop-text,
+      .tablet-text {
+        display: none;
+      }
+
+      .step-description {
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+        max-width: 350px;
+
+        h3 {
+          font-size: 1.4rem;
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 0.85rem;
+          max-width: 320px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// Container för hela sektionen
+.transaction-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  max-width: 1200px;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  margin: 0 auto;
+
+  // Döljer sektionen på tablet och mobil
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+// Styling för vänster och höger kolumner
+.transaction-item {
+  padding: 20px;
+
+  // Styling för höger kolumn
+  &.transaction-right {
+    text-align: left;
+
+    h2 {
+      font-size: 32px; // Använd samma storlek som i Figma-designen
+      color: black;
+      font-weight: 800;
+      line-height: 130%;
+      max-width: 400px; // Justera om det behövs
+      padding-left: 20px; // Lägg till padding för att skapa avstånd från vänster
+    }
+
+    .payment-details {
+      padding-left: 20px; // Lägg till padding för hela sektionen för att flytta den till höger
+
+      .payment-feature {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: center;
+
+        img {
+          width: 60px;
+          height: 60px;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #555;
+          margin-top: 10px; // Avstånd mellan ikonen och texten
+        }
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #5f63f2;
+      color: white;
+      padding: 10px 20px; // Standard padding för knappen
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+      margin-top: 20px; // Skapa avstånd mellan texten och knappen
+      padding-left: 20px; // Lägg till padding för att flytta knappen till höger
+
+      &:hover {
+        background-color: #4a4ed2;
+      }
+
+      &::after {
+        content: ' →'; // Lägg till pil efter texten
+        padding-left: 5px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // Styling för vänster kolumn
+  &.transaction-left {
+    h2 {
+      font-size: 32px; // Använd samma storlek som i Figma-designen
+      color: black;
+      font-weight: 800;
+      line-height: 130%;
+      max-width: 400px; // Justera om det behövs
+    }
+
+    ul {
+      list-style: none;
+      padding-top: 3rem;
+      margin-bottom: 20px;
+
+      li {
+        font-size: 1.1rem;
+        color: #4f4f4f;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "✓";
+          color: #5f63f2;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #5f63f2;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #4a4ed2;
+      }
+
+      &::after {
+        content: ' →'; // Lägg till pil efter texten
+        padding-left: 5px;
+      }
+    }
+  }
+}
+
+// För att placera ikonerna och texten bredvid varandra
+.payment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px; // Mellanrum mellan ikonerna och texten
+  padding-top: 3rem;
+
+  .payment-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: center;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 10px; // Avstånd mellan ikonen och texten
+    }
+  }
+}
+
+// Placera knappen under ikonerna och texten
+.transaction-item.transaction-right .btn {
+  display: inline-block;
+  background-color: #5f63f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #4a4ed2;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Testimonials-sektionen
+.testimonials-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; // Layout med två kolumner
+  gap: 60px; // Öka gapet mellan titel och testimonials
+  background-color: #f0f4ff; // Din bakgrundsfärg för hela sektionen
+  margin: 0; // Ta bort eventuella marginaler som begränsar bredden
+  width: 100vw; // Se till att sektionen tar upp hela bredden på viewporten
+  padding: 6rem 10rem; // Lägg till padding runt sektionen (10rem vänster och höger, justera efter behov)
+
+
+  // Döljer sektionen på tablet och mobil
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  // Titel för testimonials
+  .testimonials-title {
+    display: flex;
+    align-items: center;
+    justify-content: center; // Centrerar titeln vertikalt och horisontellt
+    margin-top: -15rem;
+    padding-left: 50px; // Lägger till padding för att flytta texten in från vänster
+
+    h2 {
+      padding-bottom: 0rem;
+      font-size: 40px; // Öka font storlek för att matcha Figma
+      font-weight: 800;
+      color: $color-dark; // Justera färgen om det behövs
+      max-width: 350px;
+      line-height: 1.2;
+    }
+  }
+
+  // Grid för recensionerna
+  .testimonials-reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Två kolumner för recensioner
+    gap: 40px; // Öka gapet mellan recensionerna
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; // En kolumn på mindre skärmar, om du vill ha en anpassning senare
+    }
+
+    // Styling för varje testimonial
+    .testimonial {
+      background-color: #fff;
+      padding: 30px; // Öka padding för mer utrymme inuti boxen
+      border-radius: 15px; // Lätt runda hörn för ett mjukare utseende
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Förbättra skuggan
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px); // Flytta uppåt vid hover
+      }
+
+      // Header med citattecken och stjärnor
+      .testimonial-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        // Citatteckensbilden
+        .quote-icon {
+          width: 40px; // Gör ikonen större
+          height: 40px;
+          margin-top: -5em; // Flytta upp ikonen ovanför boxen
+          position: relative;
+          z-index: 1; // Se till att ikonen visas ovanför boxen
+        }
+
+        // Stjärnorna
+        .stars {
+          color: #FFD43B; // Gula stjärnor
+          font-size: 1rem; // Öka storleken på stjärnorna för bättre synlighet
+        }
+      }
+
+      // Text för varje recension
+      p {
+        font-size: 1.1rem; // Justera textstorlek för att bättre matcha Figma
+        margin: 20px 0;
+        color: #888;
+        line-height: 1.6;
+      }
+
+      // Författarinformation (namn och titel)
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 50px; // Gör författarbilden något större
+          height: 50px;
+          border-radius: 50%; // Gör bilden rund
+        }
+
+        .author-info {
+          h4 {
+            font-size: 1.2rem; // Justera textstorlek för författarnamnet
+            margin: 0;
+            font-weight: bold;
+            color: #333; // Färg på författarnamn
+          }
+
+          p {
+            font-size: 1rem;
+            color: #888; // Färg på titel
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.faq-section {
+  display: grid;
+  grid-template-columns: 1fr; // Default for mobile
+  gap: 2rem;
+  padding: 4rem 6rem;
+
+  @media (min-width: 1025px) { // Desktop
+    grid-template-columns: 40% 60%; // Split columns for desktop
+    align-items: start;
+  }
+
+  @media (max-width: 1024px) { // Tablet
+    grid-template-columns: 1fr; // Single column for tablet
+    grid-template-rows: auto auto auto; // 3 rows: header, FAQ, contact options
+    grid-template-areas: 
+      "header"
+      "faq"
+      "contact"; // Ensure contact options are at the bottom
+    text-align: center;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) { // Mobile
+    grid-template-columns: 1fr; // Single column for mobile
+  }
+}
+
+.faq-header {
+  grid-area: header; // Assigned grid area for tablet
+  text-align: start;
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 1025px) { // Desktop
+    grid-column: 1;
+  }
+}
+
+.faq-contact-options {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 10rem;
+  width: 100%;
+  grid-area: contact; // Ensure it's at the bottom in tablet mode
+
+  .contact-option {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    img {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+
+      &:after {
+        content: "→";
+        margin-left: 0.5rem;
+        transition: margin-left 0.3s ease-in-out;
+      }
+
+      &:hover:after {
+        margin-left: 1rem;
+      }
+    }
+
+    &:first-child a {
+      color: #4a69bb;
+    }
+
+    &:nth-child(2) a {
+      color: #28a745;
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  @media (min-width: 1025px) { // Desktop
+    grid-column: 1; 
+  }
+
+  @media (max-width: 1024px) { // Tablet
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) { // Mobile
+    display: none;
+  }
+}
+
+.faq-body {
+  grid-area: faq; // Assigned grid area for tablet
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .faq-questions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+  
+    button.faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 0.75rem;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 16px; // Match Figma text size
+      
+      font-weight: 600; // SemiBold weight
+      line-height: 160%; // Line height to match the design
+      letter-spacing: 0px; // No extra spacing
+      color: #000;
+  
+      img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+  
+      &:hover {
+        background-color: #f9f9f9;
+      }
+  
+      &.active img {
+        transform: rotate(180deg);
+        
+      }
+    }
+  
+    .faq-answer {
+      display: none;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 0.5rem;
+      font-size: 16px; // Match Figma text size
+      font-weight: 400; // Normal weight for the answer text
+      line-height: 160%; // Line height for the answer text
+      letter-spacing: 0px; // No extra spacing
+      color: #6c757d; // Softer color for the answer text
+    }
+
+    .show {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1025px) { // Desktop
+    grid-column: 2;
+  }
+
+  @media (max-width: 1024px) { // Tablet
+    width: 100%;
+  }
+
+  @media (max-width: 768px) { // Mobile
+    width: 100%;
+  }
+}
+
+.single-contact-btn {
+  display: none;
+
+  @media (max-width: 768px) { // Mobile
+    display: block;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #6366F1;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.75rem;
+    font-weight: 600;
+  }
+}
+
+
+
+
+
+
+
+
+#newsletter {
+  width: 100%; // Make sure the newsletter section takes full width
+  max-width: 1300px; // Set max-width to match Figma's width
+  margin: 0 auto; // Center the entire section
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 50px; // Increased padding for a larger section
+  
+  border-radius: 12px;
+
+  .newsletter-left {
+    display: flex;
+    align-items: center;
+
+    .notification-icon {
+      width: 45px;
+      height: 45px;
+      margin-right: 15px;
+    }
+
+    p {
+      font-size: 1.25rem; // Slightly larger font size
+      font-weight: 600;
+      line-height: 1.5;
+      color: $color-white-dark;
+    }
+  }
+
+  .newsletter-right {
+    .newsletter-form {
+      display: flex;
+      align-items: center;
+
+      input[type="email"] {
+        padding: 15px 50px 15px 45px; // Increased padding for more height
+        border: 1px solid #e5e7eb;
+        border-radius: 8px 0 0 8px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s ease;
+        color: #6b7280;
+        background: url('/img/email-icon.svg') no-repeat 15px center;
+        background-size: 20px;
+        background-color: #fff; // Changed background to white
+
+        &::placeholder {
+          color: #9ca3af;
+        }
+
+        &:focus {
+          border-color: #3b82f6;
+        }
+      }
+
+      button {
+        padding: 15px 40px; // Increased padding for more height
+        background-color: #6366f1;
+        color: white;
+        border: none;
+        border-radius: 0 8px 8px 0;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #4f46e5;
+        }
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .newsletter-left {
+      margin-bottom: 20px;
+    }
+
+    .newsletter-right {
+      width: 100%;
+
+      .newsletter-form {
+        width: 100%;
+        flex-direction: column;
+
+        input[type="email"] {
+          width: 100%;
+          border-radius: 8px;
+          margin-bottom: 10px;
+          padding: 15px 15px; // Increased padding for mobile as well
+          background-position: 15px center;
+        }
+
+        button {
+          width: 100%;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
   
   
+
+
+
+
   
   
 
