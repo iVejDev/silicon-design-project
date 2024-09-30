@@ -1,0 +1,76 @@
+/* Global Dark Mode Styles */
+[data-theme="dark"] {
+    body, .section {
+      background-color: $color-background-dark; // Global background color for all sections
+      color: $color-white-dark; // Global text color for all sections
+    }
+  
+    h1, h2, h3, h4, h5, h6 {
+      color: $color-white-dark; // Heading text color in dark mode
+    }
+  
+    p, li, .text-muted {
+      color: $color-muted-text-dark; // General text and muted text in dark mode
+    }
+    
+    .card, .box, .testimonial {
+      background-color: $color-secondary-dark; // General background for boxes and testimonials
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); // Darker shadow in dark mode
+    }
+  
+    .button {
+      background-color: $color-primary-dark; // Global button background in dark mode
+      color: $color-white-dark; 
+    }
+
+    /* Sign in/up Button Fix for Dark Mode */
+    #auth-signin {
+      color: $color-white !important; 
+      background-color: $color-primary-dark; 
+    }
+
+    /* Specific Style for the Newsletter Section */
+    #newsletter {
+      background-color: $color-secondary-dark; 
+      color: $color-white-dark; 
+
+      .newsletter-left p {
+        color: $color-white-dark; 
+      }
+
+      .newsletter-right input[type="email"] {
+        background-color: darken($color-secondary-dark, 5%);
+        color: $color-white-dark; 
+        
+        &::placeholder {
+          color: $color-muted-text-dark;
+        }
+      }
+
+      .newsletter-right button {
+        color: $color-white-dark;
+      }
+    }
+  
+    /* Dark mode styles for "How It Works" Section */
+    .how-it-works {
+      background-color: $color-background-dark; // Dark background for section
+  
+      .container {
+        .section-title,
+        .desktop-text,
+        .tablet-text,
+        .mobile-text {
+          color: $color-white-dark; // Set text color to white in dark mode
+        }
+  
+        .step-description h3 {
+          color: $color-white-dark; // Set heading color to white
+        }
+  
+        .step-description p {
+          color: $color-muted-text-dark; 
+        }
+      }
+    }
+}

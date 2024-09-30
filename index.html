@@ -1,3 +1,19 @@
+<!--
+  Projekt: Silicon - Responsiv Webbdesign med Dark Mode
+  
+
+  Jag är helt ny på webbutveckling och har försökt att uppfylla kriterierna för att få väl godkänt (VG) på denna uppgift. 
+  Detta projekt innehåller en responsiv design som fungerar på både desktop, tablet och mobil. 
+  Jag har implementerat ett mörkt/ljust tema med hjälp av CSS-variabler och SCSS för att strukturera min CSS-kod på ett mer organiserat sätt. 
+
+  Jag har lärt mig mycket genom att använda resurser från nätet och olika tutorials.
+  Använt ChatGPT som ett stöd för att hjälpa mig att förstå och implementera SCSS-strukturen och JavaScript för dark mode-funktionen. 
+
+  Tack för möjligheten att lära mig och förbättra mina färdigheter i webbutveckling!
+
+  // Ilir.Vejsa
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,77 +39,80 @@
 
     <title>Silicon</title>
 </head>
+
 <body>
     <div class="wrapper">
-<!-- Header -->
-<header>
-  <div class="container">
-      <!-- Logotypen, länkad till startsidan, med lazy loading för snabbare sidladdning -->
-      <a id="logo" href="index.html">
-          <img src="/img/Logo.svg" alt="Silicon logotype" loading="lazy">
-      </a>
 
-      <!-- Navigeringsmenyn -->
-      <nav id="main-menu" class="navbar">
-          <a class="nav-link" href="#">Features</a>
-      </nav>
+        <!-- <<Header Section start>> -->
+        <header>
+            <div class="container">
+                <!-- Logotypen, länkad till startsidan, med lazy loading för snabbare sidladdning -->
+                <a id="logo" href="index.html">
+                    <img src="/img/Logo.svg" alt="Silicon logotype" loading="lazy">
+                </a>
 
-      <!-- Växla mellan mörkt och ljust läge -->
-      <div id="darkmode-toggle-switch" class="btn-toggle-switch">
-          <span class="label">Dark Mode</span>
-          <label for="darkmode-switch" class="toggle-switch">
-              <input id="darkmode-switch" type="checkbox">
-              <span class="slider round"></span>
-          </label>
-      </div>
+                <!-- Navigeringsmenyn -->
+                <nav id="main-menu" class="navbar">
+                    <a class="nav-link" href="#">Features</a>
+                </nav>
 
-      <!-- Sign in/up knapp -->
-      <a id="auth-signin" href="#" class="btn-primary" aria-label="Sign in or sign up">
-          <i class="fa-thin fa-user-large" aria-hidden="true"></i>
-          <span>Sign in/up</span>
-      </a>
+                <!-- Växla mellan mörkt och ljust läge -->
+                <div id="darkmode-toggle-switch" class="btn-toggle-switch">
+                    <span class="label">Dark Mode</span>
+                    <label for="darkmode-switch" class="toggle-switch">
+                        <input id="darkmode-switch" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
 
-      <!-- Menu bar för mobil -->
-      <button class="btn-mobile" aria-label="Toggle mobile menu">
-          <i class="fa-regular fa-bars" aria-hidden="true"></i>
-      </button>
-  </div>
-</header>
+                <!-- Sign in/up knapp -->
+                <a id="auth-signin" href="#" class="btn-primary" aria-label="Sign in or sign up">
+                    <i class="fa-thin fa-user-large" aria-hidden="true"></i>
+                    <span>Sign in/up</span>
+                </a>
+
+                <!-- Menu bar för mobil -->
+                <button class="btn-mobile" aria-label="Toggle mobile menu">
+                    <i class="fa-regular fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+        <!-- <<Header Section end>> -->
 
         <!-- Main -->
         <main>
 
-          
-            <!-- hero -->
-            <section id="hero" >
-              <div class="container">
-                <div class="headline">
-                  <h1>Manage All Your Money in One App</h1>
-                </div>
-                <div class="content">
-                  <p>We offer you a new generation of the mobile banking.
-                    Save, spend & manage money in your pocket.</p>
-                  <div class="buttons">
-                    <a class="btn-download-app" href="#"><img src="/img/appstore.svg" alt="appstore"></a>
-                    <a class="btn-download-app" href="#"><img src="/img/googleplay.svg" alt="googleplay"></a>
-                  </div>
+            <!-- <<Hero Section start>> -->
+            <section id="hero">
+                <div class="container">
+                    <div class="headline">
+                        <h1>Manage All Your Money in One App</h1>
+                    </div>
+                    <div class="content">
+                        <p>We offer you a new generation of the mobile banking.
+                            Save, spend &amp; manage money in your pocket.</p>
+                        <div class="buttons">
+                            <a class="btn-download-app" href="#"><img src="/img/appstore.svg" alt="appstore"></a>
+                            <a class="btn-download-app" href="#"><img src="/img/googleplay.svg" alt="googleplay"></a>
+                        </div>
 
-                  <a href="#" class="discover-more">
-                    <span class="btn-circle">
-                      <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                    <span>Discover more</span>
-                  </a>
-                </div>
+                        <a href="#" class="discover-more">
+                            <span class="btn-circle">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                            <span>Discover more</span>
+                        </a>
+                    </div>
 
-                <div class="images">
-                  <img class="img-back" src="/img/iphone-mybudget_desktop.svg" alt="iphone my budget">
-                  <img class="img-front" src="/img/iphone-yourcards_desktop.svg" alt="iphone your cards">
+                    <div class="images">
+                        <img class="img-back" src="/img/iphone-mybudget_desktop.svg" alt="iphone my budget">
+                        <img class="img-front" src="/img/iphone-yourcards_desktop.svg" alt="iphone your cards">
+                    </div>
                 </div>
-              </div>
             </section>
-            
-            <!-- Brands -->
+            <!-- <<Hero Section end>> -->
+
+            <!-- <<Brands Section start>> -->
             <section id="brands">
                 <div class="container">
                     <!-- Märken/Brand-boxar för partners eller funktioner -->
@@ -117,377 +136,371 @@
                     </div>
                 </div>
             </section>
+            <!-- <<Brands Section end>> -->
 
-   <!-- App features -->
-<section class="app-features">
-  <div class="container">
-    <div class="app-features-content">
-      <!-- Telefonbild -->
-      <img src="/img/telefonmedvisa.svg" class="app-image" alt="Telefonbild">
-      
-      <!-- Features-sektionen med rubrik och lådor -->
-      <div class="features-section">
-        <!-- Rubrik och beskrivning -->
-        <div class="app-features-header">
-          <h1>App Features</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
-        </div>
-        
-        <!-- Funktionslådorna -->
-        <div class="features-list">
-          <!-- Funktion 1 -->
-          <div class="feature-item">
-            <img src="/img/icon-5.svg" class="feature-icon" alt="Enkla betalningar ikon">
-            <div class="feature-text">
-              <h5>Enkla betalningar</h5>
-              <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
-            </div>
-          </div>
-          
-          <!-- Funktion 2 -->
-          <div class="feature-item">
-            <img src="/img/icon-4.svg" class="feature-icon" alt="Datasäkerhet ikon">
-            <div class="feature-text">
-              <h5>Datasäkerhet</h5>
-              <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
-            </div>
-          </div>
-          
-          <!-- Funktion 3 -->
-          <div class="feature-item">
-            <img src="/img/icon-3.svg" class="feature-icon" alt="Kostnadsstatistik ikon">
-            <div class="feature-text">
-              <h5>Kostnadsstatistik</h5>
-              <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
-            </div>
-          </div>
-          
-          <!-- Funktion 4 -->
-          <div class="feature-item">
-            <img src="/img/icon-2.svg" class="feature-icon" alt="Support 24/7 ikon">
-            <div class="feature-text">
-              <h5>Support 24/7</h5>
-              <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
-            </div>
-          </div>
-          
-          <!-- Funktion 5 -->
-          <div class="feature-item">
-            <img src="/img/icon-1.svg" class="feature-icon" alt="Regelbunden cashback ikon">
-            <div class="feature-text">
-              <h5>Regelbunden cashback</h5>
-              <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
-            </div>
-          </div>
-          
-          <!-- Funktion 6 -->
-          <div class="feature-item">
-            <img src="/img/icon.svg" class="feature-icon" alt="Högsta standarder ikon">
-            <div class="feature-text">
-              <h5>Högsta standarder</h5>
-              <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <!-- <<App Features Section start>> -->
+            <section class="app-features">
+                <div class="container">
+                    <div class="app-features-content">
+                        <!-- Telefonbild -->
+                        <img src="/img/telefonmedvisa.svg" class="app-image" alt="Telefonbild">
 
-             <!-- How Does It Work Section -->
-             <section class="how-it-works">
-              <div class="container">
-                <h2 class="section-title">How Does It Work?</h2>
-            
-                <div class="steps">
-                  <!-- Bilder för olika enheter -->
-                  <div class="step-images">
-                    <!-- Desktop-version -->
-                    <picture class="desktop-image">
-                      <source media="(min-width: 1024px)" srcset="/img/vänstertel.svg">
-                      <img src="/img/desktop_default.svg" alt="Vänster mobilvy på desktop">
-                    </picture>
-                    <picture class="desktop-image">
-                      <source media="(min-width: 1024px)" srcset="/img/mitttel.svg">
-                      <img src="/img/desktop_default.svg" alt="Mitten mobilvy på desktop">
-                    </picture>
-                    <picture class="desktop-image">
-                      <source media="(min-width: 1024px)" srcset="/img/högertel.svg">
-                      <img src="/img/desktop_default.svg" alt="Höger mobilvy på desktop">
-                    </picture>
-            
-                    <!-- Tablet-version -->
-                    <picture class="tablet-image">
-                      <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/vänstertablet.svg">
-                      <img src="/img/tablet_default.svg" alt="Vänster mobilvy på tablet">
-                    </picture>
-                    <picture class="tablet-image">
-                      <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/mitttablet.svg">
-                      <img src="/img/tablet_default.svg" alt="Mitten mobilvy på tablet">
-                    </picture>
-                    <picture class="tablet-image">
-                      <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/högertablet.png">
-                      <img src="/img/tablet_default.svg" alt="Höger mobilvy på tablet">
-                    </picture>
-            
-                    <!-- Mobil-version -->
-                    <picture class="mobile-image">
-                      <source media="(max-width: 767px)" srcset="/img/mittmobil.svg">
-                      <img src="/img/mobile_default.svg" alt="Mitten mobilvy på mobil">
-                    </picture>
-                  </div>
-            
-                  <!-- Stegbeskrivning för Desktop -->
-                  <div class="step-description desktop-text">
-                    <h3>Latest transaction history</h3>
-                    <p>
-                      Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum. 
-                    </p>
-                  </div>
-            
-                  <!-- Stegbeskrivning för Tablet -->
-                  <div class="step-description tablet-text">
-                    <h3>Step 3. Transfers to people from your
-                      contact list</h3>
-                    <p>
-                      In volutpat mollis egestas. Ut facilisis ultrices. 
-                      Pellentesque ligula est, nec lacus.
-                    </p>
-                  </div>
-            
-                  <!-- Stegbeskrivning för Mobil -->
-                  <div class="step-description mobile-text">
-                    <h3>Överföringar till personer i din kontaktlista</h3>
-                    <p>
-                      Proin volutpat mollis egestas. Nam luctus facilisis
-                      ultrices. Pellentesque volutpat ligula est. Mattis
-                      fermentum, at nec lacus.
-                    </p>
-                  </div>
+                        <!-- Features-sektionen med rubrik och lådor -->
+                        <div class="features-section">
+                            <!-- Rubrik och beskrivning -->
+                            <div class="app-features-header">
+                                <h1>App Features</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+                            </div>
+
+                            <!-- Funktionslådorna -->
+                            <div class="features-list">
+                                <!-- Funktion 1 -->
+                                <div class="feature-item">
+                                    <img src="/img/icon-5.svg" class="feature-icon" alt="Enkla betalningar ikon">
+                                    <div class="feature-text">
+                                        <h5>Enkla betalningar</h5>
+                                        <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Funktion 2 -->
+                                <div class="feature-item">
+                                    <img src="/img/icon-4.svg" class="feature-icon" alt="Datasäkerhet ikon">
+                                    <div class="feature-text">
+                                        <h5>Datasäkerhet</h5>
+                                        <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Funktion 3 -->
+                                <div class="feature-item">
+                                    <img src="/img/icon-3.svg" class="feature-icon" alt="Kostnadsstatistik ikon">
+                                    <div class="feature-text">
+                                        <h5>Kostnadsstatistik</h5>
+                                        <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Funktion 4 -->
+                                <div class="feature-item">
+                                    <img src="/img/icon-2.svg" class="feature-icon" alt="Support 24/7 ikon">
+                                    <div class="feature-text">
+                                        <h5>Support 24/7</h5>
+                                        <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Funktion 5 -->
+                                <div class="feature-item">
+                                    <img src="/img/icon-1.svg" class="feature-icon" alt="Regelbunden cashback ikon">
+                                    <div class="feature-text">
+                                        <h5>Regelbunden cashback</h5>
+                                        <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Funktion 6 -->
+                                <div class="feature-item">
+                                    <img src="/img/icon.svg" class="feature-icon" alt="Högsta standarder ikon">
+                                    <div class="feature-text">
+                                        <h5>Högsta standarder</h5>
+                                        <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </section>
-             
+            <!-- <<App Features Section end>> -->
 
-            <!-- info Section -->
+            <!-- <<How Does It Work Section start>> -->
+            <section class="how-it-works">
+                <div class="container">
+                    <h2 class="section-title">How Does It Work?</h2>
+
+                    <div class="steps">
+                        <!-- Bilder för olika enheter -->
+                        <div class="step-images">
+                            <!-- Desktop-version -->
+                            <picture class="desktop-image">
+                                <source media="(min-width: 1024px)" srcset="/img/vänstertel.svg">
+                                <img src="/img/desktop_default.svg" alt="Vänster mobilvy på desktop">
+                            </picture>
+                            <picture class="desktop-image">
+                                <source media="(min-width: 1024px)" srcset="/img/mitttel.svg">
+                                <img src="/img/desktop_default.svg" alt="Mitten mobilvy på desktop">
+                            </picture>
+                            <picture class="desktop-image">
+                                <source media="(min-width: 1024px)" srcset="/img/högertel.svg">
+                                <img src="/img/desktop_default.svg" alt="Höger mobilvy på desktop">
+                            </picture>
+
+                            <!-- Tablet-version -->
+                            <picture class="tablet-image">
+                                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/vänstertablet.svg">
+                                <img src="/img/tablet_default.svg" alt="Vänster mobilvy på tablet">
+                            </picture>
+                            <picture class="tablet-image">
+                                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/mitttablet.svg">
+                                <img src="/img/tablet_default.svg" alt="Mitten mobilvy på tablet">
+                            </picture>
+                            <picture class="tablet-image">
+                                <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/högertablet.png">
+                                <img src="/img/tablet_default.svg" alt="Höger mobilvy på tablet">
+                            </picture>
+
+                            <!-- Mobil-version -->
+                            <picture class="mobile-image">
+                                <source media="(max-width: 767px)" srcset="/img/mittmobil.svg">
+                                <img src="/img/mobile_default.svg" alt="Mitten mobilvy på mobil">
+                            </picture>
+                        </div>
+
+                        <!-- Stegbeskrivning för Desktop -->
+                        <div class="step-description desktop-text">
+                            <h3>Latest transaction history</h3>
+                            <p>
+                                Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in consectetur condimentum.
+                            </p>
+                        </div>
+
+                        <!-- Stegbeskrivning för Tablet -->
+                        <div class="step-description tablet-text">
+                            <h3>Step 3. Transfers to people from your contact list</h3>
+                            <p>
+                                In volutpat mollis egestas. Ut facilisis ultrices.
+                                Pellentesque ligula est, nec lacus.
+                            </p>
+                        </div>
+
+                        <!-- Stegbeskrivning för Mobil -->
+                        <div class="step-description mobile-text">
+                            <h3>Transfers to people from your contact list</h3>
+                            <p>
+                                Proin volutpat mollis egestas. Nam luctus facilisis
+                                ultrices. Pellentesque volutpat ligula est. Mattis
+                                fermentum, at nec lacus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <<How Does It Work Section end>> -->
+
+            <!-- <<Transaction Section start>> -->
             <section class="transaction-section">
-              <div class="transaction-item transaction-left">
-                <h2>Make your money transfer simple and clear</h2>
-                <ul>
-                  <li>Banking transactions are free for you</li>
-                  <li>No monthly cash commission</li>
-                  <li>Manage payments and transactions online</li>
-                </ul>
-                <a href="#" class="btn">Learn more</a>
-              </div>
-              <div class="transaction-item transaction-right">
-                <img src="/img/inner.svg" alt="Transaction graph">
-              </div>
-            
-              <div class="transaction-item transaction-left">
-                <img src="/img/contactsvisa.svg" alt="Contact list with card">
-              </div>
-              <div class="transaction-item transaction-right">
-                <h2>Receive payment from international bank details</h2>
-                <div class="payment-details">
-                  <div class="payment-feature">
-                    <img src="/img/icon-5.svg" alt="Icon 1">
-                    <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
-                  </div>
-                  <div class="payment-feature">
-                    <img src="/img/icon-1.svg" alt="Icon 2">
-                    <p>A elementum et imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
-                  </div>
+                <div class="transaction-item transaction-left">
+                    <h2>Make your money transfer simple and clear</h2>
+                    <ul>
+                        <li>Banking transactions are free for you</li>
+                        <li>No monthly cash commission</li>
+                        <li>Manage payments and transactions online</li>
+                    </ul>
+                    <a href="#" class="btn">Learn more</a>
                 </div>
-                <a href="#" class="btn">Learn more</a>
-              </div>
-            </section>
-            
+                <div class="transaction-item transaction-right">
+                    <img src="/img/inner.svg" alt="Transaction graph">
+                </div>
 
-            <!-- testimonials-section -->
+                <div class="transaction-item transaction-left">
+                    <img src="/img/contactsvisa.svg" alt="Contact list with card">
+                </div>
+                <div class="transaction-item transaction-right">
+                    <h2>Receive payment from international bank details</h2>
+                    <div class="payment-details">
+                        <div class="payment-feature">
+                            <img src="/img/icon-5.svg" alt="Icon 1">
+                            <p>Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
+                        </div>
+                        <div class="payment-feature">
+                            <img src="/img/icon-1.svg" alt="Icon 2">
+                            <p>A elementum et imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </section>
+            <!-- <<Transaction Section end>> -->
+
+            <!-- <<Testimonials Section start>> -->
             <section class="testimonials-section">
-              <div class="testimonials-title">
-                <h2>Clients are Loving Our App</h2>
-              </div>
-              <div class="testimonials-reviews">
-                <div class="testimonial">
-                  <div class="testimonial-header">
-                    <img src="/img/quotes.svg" alt="Quote Icon" class="quote-icon">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i>
-                    </div>
-                  </div>
-                  <p>
-                    Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis.
-                    Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel.
-                    Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.
-                  </p>
-                  <div class="testimonial-author">
-                    <img src="img/fannie.svg" alt="Fannie Summers">
-                    <div class="author-info">
-                      <h4>Fannie Summers</h4>
-                      <p>Designer</p>
-                    </div>
-                  </div>
+                <div class="testimonials-title">
+                    <h2>Clients are Loving Our App</h2>
                 </div>
-            
-                <div class="testimonial">
-                  <div class="testimonial-header">
-                    <img src="/img/quotes.svg" alt="Quote Icon" class="quote-icon">
-                    <div class="stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
+                <div class="testimonials-reviews">
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <img src="/img/quotes.svg" alt="Quote Icon" class="quote-icon">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p>
+                            Sit pretium aliquam tempor, orci dolor sed maecenas rutrum sagittis.
+                            Laoreet posuere rhoncus, egestas lacus, egestas justo aliquam vel.
+                            Nisi vitae lectus hac hendrerit. Montes justo turpis sit amet.
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="img/fannie.svg" alt="Fannie Summers">
+                            <div class="author-info">
+                                <h4>Fannie Summers</h4>
+                                <p>Designer</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <p>
-                    Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet
-                    porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit
-                    amet. Dictum pretium dolor tincidunt egestas eget nunc.
-                  </p>
-                  <div class="testimonial-author">
-                    <img src="img/albert.svg" alt="Albert Flores">
-                    <div class="author-info">
-                      <h4>Albert Flores</h4>
-                      <p>Developer</p>
+
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <img src="/img/quotes.svg" alt="Quote Icon" class="quote-icon">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p>
+                            Nunc senectus leo vel venenatis accumsan vestibulum sollicitudin amet
+                            porttitor. Nisl bibendum nulla tincidunt eu enim ornare dictumst sit
+                            amet. Dictum pretium dolor tincidunt egestas eget nunc.
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="img/albert.svg" alt="Albert Flores">
+                            <div class="author-info">
+                                <h4>Albert Flores</h4>
+                                <p>Developer</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </section>
+            <!-- <<Testimonials Section end>> -->
 
-
-
-
+            <!-- <<FAQ Section start>> -->
             <section class="faq-section">
-              <!-- FAQ Header -->
-              <div class="faq-header">
-                <h2>Any questions? <br> Check out the FAQs</h2>
-                <p>Still have unanswered questions and need to get in touch?</p>
-              </div>
-            
-              <!-- Contact Options -->
-              <div class="faq-contact-options">
-                <div class="contact-option">
-                  <img src="/img/smallphone.svg" alt="Phone icon" />
-                  <p>Still have questions?</p>
-                  <a href="#">Contact us</a>
+                <!-- FAQ Header -->
+                <div class="faq-header">
+                    <h2>Any questions? <br> Check out the FAQs</h2>
+                    <p>Still have unanswered questions and need to get in touch?</p>
                 </div>
-                <div class="contact-option">
-                  <img src="/img/greenchat.svg" alt="Chat icon" />
-                  <p>Don't like phone calls?</p>
-                  <a href="#">Contact us</a>
+
+                <!-- Contact Options -->
+                <div class="faq-contact-options">
+                    <div class="contact-option">
+                        <img src="/img/smallphone.svg" alt="Phone icon" />
+                        <p>Still have questions?</p>
+                        <a href="#">Contact us</a>
+                    </div>
+                    <div class="contact-option">
+                        <img src="/img/greenchat.svg" alt="Chat icon" />
+                        <p>Don't like phone calls?</p>
+                        <a href="#">Contact us</a>
+                    </div>
                 </div>
-              </div>
-            
-              <!-- FAQ Body containing only questions -->
-              <div class="faq-body">
-                <div class="faq-questions">
-                  <button class="faq-question" data-index="0">
-                    Is any of my personal information stored in the App?
-                    <img src="/img/arrows.svg" alt="Arrow icon">
-                  </button>
-                  <div class="faq-answer" data-index="0">
-                    <p>
-                      Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
-                    </p>
-                  </div>
-            
-                  <button class="faq-question" data-index="1">
-                    What formats can I download my transaction history in?
-                    <img src="/img/arrows.svg" alt="Arrow icon">
-                  </button>
-                  <div class="faq-answer" data-index="1">
-                    <p>
-                      Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
-                    </p>
-                  </div>
-            
-                  <button class="faq-question active" data-index="2">
-                    Can I schedule future transfers?
-                    <img src="/img/arrows.svg" alt="Arrow icon">
-                  </button>
-                  <div class="faq-answer show" data-index="2">
-                    <p>
-                      Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
-                    </p>
-                  </div>
-            
-                  <button class="faq-question" data-index="3">
-                    When can I use Banking App services?
-                    <img src="/img/arrows.svg" alt="Arrow icon">
-                  </button>
-                  <div class="faq-answer" data-index="3">
-                    <p>
-                      Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
-                    </p>
-                  </div>
-            
-                  <button class="faq-question" data-index="4">
-                    Can I create my own password that is easy for me to remember?
-                    <img src="/img/arrows.svg" alt="Arrow icon">
-                  </button>
-                  <div class="faq-answer" data-index="4">
-                    <p>
-                      Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
-                    </p>
-                  </div>
-            
-                  <button class="faq-question" data-index="5">
-                    What happens if I forget or lose my password?
-                    <img src="/img/arrows.svg" alt="Arrow icon">
-                  </button>
-                  <div class="faq-answer" data-index="5">
-                    <p>
-                      Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
-                    </p>
-                  </div>
+
+                <!-- FAQ Body containing only questions -->
+                <div class="faq-body">
+                    <div class="faq-questions">
+                        <button class="faq-question" data-index="0">
+                            Is any of my personal information stored in the App?
+                            <img src="/img/arrows.svg" alt="Arrow icon">
+                        </button>
+                        <div class="faq-answer" data-index="0">
+                            <p>
+                                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
+                            </p>
+                        </div>
+
+                        <button class="faq-question" data-index="1">
+                            What formats can I download my transaction history in?
+                            <img src="/img/arrows.svg" alt="Arrow icon">
+                        </button>
+                        <div class="faq-answer" data-index="1">
+                            <p>
+                                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
+                            </p>
+                        </div>
+
+                        <button class="faq-question active" data-index="2">
+                            Can I schedule future transfers?
+                            <img src="/img/arrows.svg" alt="Arrow icon">
+                        </button>
+                        <div class="faq-answer show" data-index="2">
+                            <p>
+                                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
+                            </p>
+                        </div>
+
+                        <button class="faq-question" data-index="3">
+                            When can I use Banking App services?
+                            <img src="/img/arrows.svg" alt="Arrow icon">
+                        </button>
+                        <div class="faq-answer" data-index="3">
+                            <p>
+                                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
+                            </p>
+                        </div>
+
+                        <button class="faq-question" data-index="4">
+                            Can I create my own password that is easy for me to remember?
+                            <img src="/img/arrows.svg" alt="Arrow icon">
+                        </button>
+                        <div class="faq-answer" data-index="4">
+                            <p>
+                                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
+                            </p>
+                        </div>
+
+                        <button class="faq-question" data-index="5">
+                            What happens if I forget or lose my password?
+                            <img src="/img/arrows.svg" alt="Arrow icon">
+                        </button>
+                        <div class="faq-answer" data-index="5">
+                            <p>
+                                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            
-              <!-- Single "Contact us" button for mobile -->
-              <a href="#" class="single-contact-btn">Contact us now</a>
+
+                <!-- Single "Contact us" button for mobile -->
+                <a href="#" class="single-contact-btn">Contact us now</a>
             </section>
-            
-            
-            
-            
+            <!-- <<FAQ Section end>> -->
 
-
-
-
-
-
-<!-- Newsletter Section -->
-<section id="newsletter">
-  <div class="newsletter-left">
-    <img src="/img/notification.svg" alt="Notification Icon" class="notification-icon">
-    <p>Subscribe to our newsletter to stay<br>informed about latest updates</p>
-  </div>
-  <div class="newsletter-right">
-    <form action="#" method="post" class="newsletter-form">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
-
+            <!-- <<Newsletter Section start>> -->
+            <section id="newsletter">
+                <div class="newsletter-left">
+                    <img src="/img/notification.svg" alt="Notification Icon" class="notification-icon">
+                    <p>Subscribe to our newsletter to stay<br>informed about latest updates</p>
+                </div>
+                <div class="newsletter-right">
+                    <form action="#" method="post" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+            <!-- <<Newsletter Section end>> -->
 
         </main>
 
-            <!-- Footer -->
+        <!-- <<Footer Section start>> -->
         <footer>
             <div class="container">
                 <p class="copyright">© 2024 Silicon. All rights reserved.</p>
                 <p class="credit">Credit MadrasThemes</p>
             </div>
         </footer>
+        <!-- <<Footer Section end>> -->
+
     </div>
 
     <script src="js/main.js"></script>

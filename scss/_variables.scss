@@ -5,6 +5,7 @@ $color-secondary: #EFF2FC; // light background
 $color-gray: #9397AD; // muted text color
 $color-light-gray: #565973; // lighter gray for borders or secondary elements
 $color-border-gray: #9397AD; // border color for light mode
+$color-gray-700: #f0f4ff;
 
 $color-white: #fff; // white background
 $color-gradient1: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%); // gradient
@@ -28,6 +29,8 @@ $color-secondary-current: $color-secondary; // light background initially
 $color-border-current: $color-border-gray; // light mode border
 $color-muted-text-current: $color-gray; // muted text in light mode
 $color-gradient-current: $color-gradient1; // gradient
+$color-muted-text-dark: #6b7280; // Example muted text color for dark mode
+
 
 // Dark Mode Variables to Switch
 $color-background-dark-current: $color-dark-bg;

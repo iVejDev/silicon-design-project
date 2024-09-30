@@ -1,55 +1,20 @@
+// Light mode (default)
 body {
   background-color: $color-background-current;
   color: $color-text-current;
 }
 
-[data-theme='dark'] {
-  body {
-    background-color: $color-background-dark-current; // Dark mode background
-    color: $color-text-dark-current; // Dark mode text color
-  }
+// Dark mode styles
+[data-theme='dark'] body {
+  background-color: $color-background-dark-current; // Dark mode background
+  color: $color-text-dark-current; // Dark mode text color
 }
 
 
-// Sektion för Brands
-#brands {
-    padding: 2rem 0;
-    display: none; // Dölj brands-sektionen i mobilt läge
-
-    // Justerar containern
-     .container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap; // Gör att brands radas upp snyggt
-    }
-
-    // Stilar för varje brand-box
-    .brand-box {
-         border: 1px solid $color-border-gray; // Använder färgvariabel
-         border-radius: 8px;
-         height: 100px;
-         width: 200px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
 
 
-        &:hover {
-            transform: scale(1.05); // Zooma in vid hover
-        }
-    }
-}
 
-// Media queries för större skärmar
-@media (min-width: 768px) {
-    #brands {
-        display: flex; // Visa brands-sektionen vid skärmar större än 768px
-    }
-    
-}
-
+/* <<Hero Section start>> */
 #hero {
   background: rgb(99, 102, 241);
   background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
@@ -61,6 +26,7 @@ body {
     padding-bottom: 0;
   }
 
+  /* <<Container>> */
   .container {
     display: grid;
     gap: 2rem;
@@ -84,9 +50,8 @@ body {
         "content images";
     }
   }
-}
 
-
+  /* <<Headline>> */
   .headline {
     grid-area: headline;
     text-align: center;
@@ -105,6 +70,7 @@ body {
     }
   }
 
+  /* <<Content>> */
   .content {
     grid-area: content;
     text-align: center;
@@ -118,6 +84,7 @@ body {
       margin-bottom: 2rem;
     }
 
+    /* <<Buttons>> */
     .buttons {
       display: flex;
       flex-direction: column;
@@ -146,8 +113,8 @@ body {
       }
     }
 
+    /* <<Discover More Button>> */
     .discover-more {
-      
       color: $color-dark;
       display: flex;
       align-items: center;
@@ -166,203 +133,278 @@ body {
     }
   }
 
+  /* <<Images>> */
   .images {
     position: relative;
     grid-area: images;
     display: none;
     margin-left: 2rem;
-  
+
     @media (min-width: 768px) {
       display: block;
     }
-  
+
     .img-back {
       position: absolute;
       z-index: -10;
       bottom: 0;
-      right: 150px; // Flytta närmare texten
-      width: 55%; // Justera bredd för bättre balans
+      right: 150px;
+      width: 55%;
       height: auto;
     }
-  
+
     .img-front {
       position: absolute;
       z-index: -5;
       bottom: 0;
-      right: 30px; // Flytta närmare den bakre telefonen
-      width: 50%; // Justera bredd för bättre balans
+      right: 30px;
+      width: 50%;
       height: auto;
     }
-  
-    // Justeringar specifikt för iPad (768px - 1400px)
+
     @media (min-width: 744px) and (max-width: 1400px) {
       .img-back {
-        width: 70%; // Öka storleken på bakre telefonen
-        right: 50px; // Justera placeringen närmare texten
+        width: 70%;
+        right: 50px;
       }
-  
+
       .img-front {
-        width: 65%; // Öka storleken på främre telefonen
-        right: 20px; // Justera placeringen för att matcha
+        width: 65%;
+        right: 20px;
       }
     }
-  
+
     @media (min-width: 1400px) {
       .img-back {
         bottom: -50px;
-        right: 180px; // Justera positionen för större skärmar
+        right: 180px;
       }
-  
+
       .img-front {
         bottom: -50px;
-        right: 60px; // Justera positionen för större skärmar
+        right: 60px;
       }
     }
   }
-  
- 
-  
-  
+}
+/* <<Hero Section end>> */
 
 
-  .app-image {
-    display: none;
+
+/* <<Brands Section start>> */
+
+// Sektion för Brands
+#brands {
+  padding: 6rem 0;
+  display: none; // Dölj brands-sektionen i mobilt läge
+
+  /* <<Container>> */
+  .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap; // Gör att brands radas upp snyggt
   }
-  .app-features {
-    padding: 20px;
-    
-    .app-features-content {
+
+  /* <<Brand-box>> */
+  .brand-box {
+      border: 1px solid $color-border-gray;
+      border-radius: 8px;
+      height: 100px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+          transform: scale(1.05); // Zooma in vid hover
+      }
+  }
+}
+
+// Media queries för större skärmar
+@media (min-width: 768px) {
+  #brands {
+      display: flex; 
+  }
+}
+
+/* <<Brands Section end>> */
+
+
+
+
+/* <<App Features Section start>> */
+
+.app-image {
+  display: none;
+}
+
+.app-features {
+  padding: 20px;
+
+  /* <<App Features Content>> */
+  .app-features-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* <<Features Section>> */
+    .features-section {
       display: flex;
       flex-direction: column;
-      align-items: center;
-  
-      .features-section {
+      width: 100%;
+
+      /* <<App Features Header>> */
+      .app-features-header {
+        text-align: center;
+
+        h1 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+          margin: 10px 0;
+          color: $color-light-gray; 
+        }
+      }
+
+      /* <<Features List>> */
+      .features-list {
         display: flex;
         flex-direction: column;
-        width: 100%;
-  
-        .app-features-header {
-          text-align: center;
-          h1 {
-            font-size: 24px;
-            color: #0B0F19;
-          }
-          p {
-            font-size: 16px;
-            margin: 10px 0;
-            color: $color-light-gray;
+        gap: 1rem;
+
+        /* <<Feature Item>> */
+        .feature-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .feature-text {
+            max-width: 16rem;
+            padding-top: 1.5rem;
+
+            h5 {
+              font-size: 1.1rem;
+              color: $color-dark; 
+              [data-theme="dark"] & {
+                color: $color-white-dark; 
+              }
+            }
+            p {
+              font-size: 1rem;
+              padding-top: 1rem;
+              color: $color-light-gray;
+            }
           }
         }
-  
+      }
+    }
+  }
+
+  /* <<Tablet Layout>> */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .app-features-content {
+      .features-section {
+        .app-features-header {
+          h1 {
+            font-size: 28px;
+          }
+        }
+
+        .features-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          justify-content: center; 
+          align-items: center; 
+
+          .feature-text {
+            h5 {
+              font-size: 18px;
+              color: $color-dark; 
+              [data-theme="dark"] & {
+                color: $color-white-dark;
+              }
+            }
+            p {
+              font-size: 14px;
+              color: $color-light-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* <<Mobile Layout>> */
+  @media (max-width: 768px) {
+    .app-features-content {
+      .features-section {
         .features-list {
           display: flex;
           flex-direction: column;
-          gap: 1rem;
-  
+          justify-content: center; 
+          align-items: center; 
+        }
+      }
+    }
+  }
+
+  /* <<Desktop Layout>> */
+  @media (min-width: 1400px) {
+    padding: 6.875rem;
+    display: flex;
+    justify-content: center;
+
+    .app-features-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      gap: 50px;
+
+      .app-image {
+        display: block;
+      }
+
+      .features-section {
+        width: 60%;
+        text-align: left;
+
+        .app-features-header {
+          padding-bottom: 4rem;
+          text-align: left;
+          h1 {
+            font-size: 36px;
+          }
+        }
+
+        .features-list {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem;
+
           .feature-item {
             display: flex;
-            align-items: center;
             gap: 15px;
-  
-            .feature-icon { }
-  
-            .feature-text {
-              max-width: 16rem;
-              padding-top: 1.5rem;
-  
-              h5 {
-                font-size: 1.1rem;
-                color: $color-dark;
-              }
-              p {
-                font-size: 1rem;
-                padding-top: 1rem;
-                color: $color-light-gray;
-              }
-            }
-          }
-        }
-      }
-    }
-  
-    // Tablet Layout
-    @media (min-width: 768px) and (max-width: 1024px) {
-      .app-features-content {
-        .features-section {
-          .app-features-header {
-            h1 {
-              font-size: 28px;
-            }
-          }
-  
-          .features-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-  
+            align-items: center;
+
             .feature-text {
               h5 {
-                font-size: 18px;
+                font-size: 20px;
+                margin: 0;
+                color: $color-dark; 
+                [data-theme="dark"] & {
+                  color: $color-white-dark; 
+                }
               }
               p {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-    }
-  
-    // Desktop Layout
-    @media (min-width: 1400px) {
-      padding: 6.875rem;
-      display: flex;
-      justify-content: center;
-  
-      .app-features-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        gap: 50px;
-  
-        .app-image {
-          display: block;
-        }
-  
-        .features-section {
-          width: 60%;
-          text-align: left;
-  
-          .app-features-header {
-            padding-bottom: 4rem;
-            text-align: left;
-            h1 {
-              font-size: 36px;
-              
-            }
-          }
-  
-          .features-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
-  
-            .feature-item {
-              display: flex;
-              gap: 15px;
-              align-items: center;
-  
-              .feature-text {
-                h5 {
-                  font-size: 20px;
-                  margin: 0;
-                  
-                }
-                p {
-                  font-size: 16px;
-                  margin: 0;
-                }
+                font-size: 16px;
+                margin: 0;
+                color: $color-light-gray; 
               }
             }
           }
@@ -370,64 +412,68 @@ body {
       }
     }
   }
-  
+}
+
+/* <<App Features Section end>> */
+
+
 
   
-  
-
-
-
-  
-
-/* Grundläggande styling för sektionen */
-.how-it-works {
  
+ /* <<How It Works Section start>> */
 
+.how-it-works {
+  background-color: $color-gray-700; // Default för light mode
+
+  /* <<Container>> */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
 
-    // Styling för rubriken
+    /* <<Section Title>> */
     .section-title {
       font-size: 2.5rem;
       font-weight: bold;
       padding: 5.3rem;
+      color: $color-text-current;
     }
 
-    // Styling för bilder och steg
+    /* <<Step Images>> */
     .step-images {
       display: flex;
       justify-content: space-around;
       margin-bottom: 40px;
       gap: 5.3rem;
 
-      // Visa endast desktop-bilder i desktop-läge
+      /* Visa endast desktop-bilder i desktop-läge */
       .desktop-image {
         display: block;
         height: auto;
         width: auto;
       }
 
-      // Döljer tablet och mobil-bilder i desktop-läge
+      /* Döljer tablet och mobil-bilder i desktop-läge */
       .tablet-image,
       .mobile-image {
         display: none;
       }
     }
 
-    // Visa endast desktop-text i desktop-läge
+    /* Visa endast desktop-text i desktop-läge */
     .desktop-text {
       display: block;
+      color: $color-text-current;
     }
 
-    // Döljer tablet- och mobilbeskrivningar i desktop-läge
+    /* Döljer tablet- och mobilbeskrivningar i desktop-läge */
     .tablet-text,
     .mobile-text {
       display: none;
     }
 
+    /* <<Step Description>> */
     .step-description {
       text-align: center;
       margin: auto;
@@ -438,11 +484,12 @@ body {
         font-size: 1.8rem;
         margin-bottom: 10px;
         font-weight: bold;
+        color: $color-text-current;
       }
 
       p {
         font-size: 1rem;
-        color: #7a7a7a;
+        color: $color-muted-text-current;
         max-width: 400px;
         margin: 0 auto;
       }
@@ -450,7 +497,7 @@ body {
   }
 }
 
-/* Media Queries för tablet-läge (768px - 1023px) */
+/* <<Tablet Layout>> */
 @media (min-width: 768px) and (max-width: 1023px) {
   .how-it-works {
     .container {
@@ -459,20 +506,21 @@ body {
       .section-title {
         font-size: 2rem; /* Mindre rubrik för tablet */
         padding: 4rem;
+        color: $color-text-current;
       }
 
       .step-images {
         display: flex;
-        flex-direction: row; /* Ändra till radvis layout */
-        justify-content: space-evenly; /* Distribute space evenly between the images */
+        flex-direction: row; 
+        justify-content: space-evenly; 
         align-items: center;
-        gap: 1rem; /* Justera mellanrummet mellan bilderna */
+        gap: 1rem;
         margin-bottom: 30px;
 
-        // Visa endast tablet-bilder i tablet-läge
+        /* Visa endast tablet-bilder i tablet-läge */
         .tablet-image {
           display: block;
-          width: 25%; /* Justera bredden för att passa tre bilder */
+          width: 25%;
           height: auto;
         }
 
@@ -482,12 +530,11 @@ body {
         }
       }
 
-      // Visa endast tablet-text i tablet-läge
       .tablet-text {
         display: block;
+        color: $color-text-current;
       }
 
-      // Döljer desktop- och mobilbeskrivningar i tablet-läge
       .desktop-text,
       .mobile-text {
         display: none;
@@ -501,10 +548,12 @@ body {
         h3 {
           font-size: 1.6rem;
           margin-bottom: 10px;
+          color: $color-text-current; 
         }
 
         p {
           font-size: 0.9rem;
+          color: $color-muted-text-current;
           max-width: 350px;
         }
       }
@@ -512,8 +561,7 @@ body {
   }
 }
 
-
-/* Media Queries för mobil-läge (max-width: 767px) */
+/* <<Mobile Layout>> */
 @media (max-width: 767px) {
   .how-it-works {
     .container {
@@ -522,17 +570,18 @@ body {
       .section-title {
         font-size: 1.8rem; /* Mindre rubrik för mobil */
         padding: 3rem;
+        color: $color-text-current; 
       }
 
       .step-images {
         display: flex;
-        flex-direction: column; /* Bilder staplas vertikalt i mobil-läge */
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
         margin-bottom: 20px;
 
-        // Visa endast mobil-bilder i mobil-läge
+        /* Visa endast mobil-bilder i mobil-läge */
         .mobile-image {
           display: block;
           width: 100%;
@@ -545,12 +594,11 @@ body {
         }
       }
 
-      // Visa endast mobil-text i mobil-läge
       .mobile-text {
         display: block;
+        color: $color-text-current; 
       }
 
-      // Döljer desktop- och tabletbeskrivningar i mobil-läge
       .desktop-text,
       .tablet-text {
         display: none;
@@ -564,10 +612,12 @@ body {
         h3 {
           font-size: 1.4rem;
           margin-bottom: 8px;
+          color: $color-text-current; 
         }
 
         p {
           font-size: 0.85rem;
+          color: $color-muted-text-current; 
           max-width: 320px;
         }
       }
@@ -575,13 +625,35 @@ body {
   }
 }
 
+/* Dark mode styles for "How It Works" */
+[data-theme="dark"] .how-it-works {
+  background-color: $color-background-dark; 
+
+  .container {
+    .section-title,
+    .desktop-text,
+    .tablet-text,
+    .mobile-text {
+      color: $color-white-dark; 
+    }
+
+    .step-description h3 {
+      color: $color-white-dark;
+    }
+
+    .step-description p {
+      color: $color-muted-text-dark; 
+    }
+  }
+}
+
+/* <<How It Works Section end>> */
+
+  
 
 
-
-
-
-
-
+  
+/* <<Transaction Section start>> */
 
 // Container för hela sektionen
 .transaction-section {
@@ -599,25 +671,26 @@ body {
   }
 }
 
+/* <<Transaction Item>> */
 // Styling för vänster och höger kolumner
 .transaction-item {
   padding: 20px;
 
-  // Styling för höger kolumn
+  // <<Right Column>> 
   &.transaction-right {
     text-align: left;
 
     h2 {
-      font-size: 32px; // Använd samma storlek som i Figma-designen
-      color: black;
+      font-size: 32px;
+      
       font-weight: 800;
       line-height: 130%;
-      max-width: 400px; // Justera om det behövs
-      padding-left: 20px; // Lägg till padding för att skapa avstånd från vänster
+      max-width: 400px; 
+      padding-left: 20px; 
     }
 
     .payment-details {
-      padding-left: 20px; // Lägg till padding för hela sektionen för att flytta den till höger
+      padding-left: 20px;
 
       .payment-feature {
         display: flex;
@@ -633,7 +706,8 @@ body {
         p {
           font-size: 1rem;
           color: #555;
-          margin-top: 10px; // Avstånd mellan ikonen och texten
+          margin-top: 10px;
+          text-align: start;
         }
       }
     }
@@ -642,13 +716,13 @@ body {
       display: inline-block;
       background-color: #5f63f2;
       color: white;
-      padding: 10px 20px; // Standard padding för knappen
+      padding: 10px 20px; 
       text-decoration: none;
       border-radius: 5px;
       font-size: 1rem;
       transition: background-color 0.3s ease;
-      margin-top: 20px; // Skapa avstånd mellan texten och knappen
-      padding-left: 20px; // Lägg till padding för att flytta knappen till höger
+      margin-top: 20px;
+      padding-left: 20px; 
 
       &:hover {
         background-color: #4a4ed2;
@@ -666,14 +740,14 @@ body {
     }
   }
 
-  // Styling för vänster kolumn
+  // <<Left Column>> 
   &.transaction-left {
     h2 {
-      font-size: 32px; // Använd samma storlek som i Figma-designen
-      color: black;
+      font-size: 32px;
+      
       font-weight: 800;
       line-height: 130%;
-      max-width: 400px; // Justera om det behövs
+      max-width: 400px;
     }
 
     ul {
@@ -718,12 +792,13 @@ body {
   }
 }
 
+/* <<Payment Details>> */
 // För att placera ikonerna och texten bredvid varandra
 .payment-details {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px; // Mellanrum mellan ikonerna och texten
+  gap: 40px; 
   padding-top: 3rem;
 
   .payment-feature {
@@ -740,11 +815,12 @@ body {
     p {
       font-size: 1rem;
       color: #555;
-      margin-top: 10px; // Avstånd mellan ikonen och texten
+      margin-top: 10px; 
     }
   }
 }
 
+/* <<Right Column Button>> */
 // Placera knappen under ikonerna och texten
 .transaction-item.transaction-right .btn {
   display: inline-block;
@@ -760,27 +836,24 @@ body {
   }
 }
 
+/* <<Transaction Section end>> */
+    
 
 
 
 
 
-
-
-
-
-
+/* <<Testimonials Section start>> */
 
 // Testimonials-sektionen
 .testimonials-section {
   display: grid;
-  grid-template-columns: 1fr 2fr; // Layout med två kolumner
-  gap: 60px; // Öka gapet mellan titel och testimonials
-  background-color: #f0f4ff; // Din bakgrundsfärg för hela sektionen
-  margin: 0; // Ta bort eventuella marginaler som begränsar bredden
-  width: 100vw; // Se till att sektionen tar upp hela bredden på viewporten
-  padding: 6rem 10rem; // Lägg till padding runt sektionen (10rem vänster och höger, justera efter behov)
-
+  grid-template-columns: 1fr 2fr; 
+  gap: 60px; 
+  background-color: $color-gray-700; // Bakgrundsfärg för hela sektionen (light mode)
+  margin: 0; 
+  width: 100vw; 
+  padding: 6rem 10rem;
 
   // Döljer sektionen på tablet och mobil
   @media (max-width: 1024px) {
@@ -791,15 +864,15 @@ body {
   .testimonials-title {
     display: flex;
     align-items: center;
-    justify-content: center; // Centrerar titeln vertikalt och horisontellt
+    justify-content: center; 
     margin-top: -15rem;
-    padding-left: 50px; // Lägger till padding för att flytta texten in från vänster
+    padding-left: 50px; 
 
     h2 {
       padding-bottom: 0rem;
-      font-size: 40px; // Öka font storlek för att matcha Figma
+      font-size: 40px;
       font-weight: 800;
-      color: $color-dark; // Justera färgen om det behövs
+      color: $color-dark; 
       max-width: 350px;
       line-height: 1.2;
     }
@@ -808,19 +881,18 @@ body {
   // Grid för recensionerna
   .testimonials-reviews {
     display: grid;
-    grid-template-columns: 1fr 1fr; // Två kolumner för recensioner
-    gap: 40px; // Öka gapet mellan recensionerna
-
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; 
     @media (max-width: 768px) {
-      grid-template-columns: 1fr; // En kolumn på mindre skärmar, om du vill ha en anpassning senare
+      grid-template-columns: 1fr;
     }
 
     // Styling för varje testimonial
     .testimonial {
-      background-color: #fff;
-      padding: 30px; // Öka padding för mer utrymme inuti boxen
-      border-radius: 15px; // Lätt runda hörn för ett mjukare utseende
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Förbättra skuggan
+      background-color: #fff; 
+      padding: 30px; 
+      border-radius: 15px; 
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
       transition: transform 0.3s ease;
 
       &:hover {
@@ -835,7 +907,7 @@ body {
 
         // Citatteckensbilden
         .quote-icon {
-          width: 40px; // Gör ikonen större
+          width: 40px; 
           height: 40px;
           margin-top: -5em; // Flytta upp ikonen ovanför boxen
           position: relative;
@@ -851,9 +923,9 @@ body {
 
       // Text för varje recension
       p {
-        font-size: 1.1rem; // Justera textstorlek för att bättre matcha Figma
+        font-size: 1.1rem;
         margin: 20px 0;
-        color: #888;
+        color: #888; 
         line-height: 1.6;
       }
 
@@ -871,15 +943,15 @@ body {
 
         .author-info {
           h4 {
-            font-size: 1.2rem; // Justera textstorlek för författarnamnet
+            font-size: 1.2rem; 
             margin: 0;
             font-weight: bold;
-            color: #333; // Färg på författarnamn
+            color: #333;
           }
 
           p {
             font-size: 1rem;
-            color: #888; // Färg på titel
+            color: #888; 
             margin: 0;
           }
         }
@@ -888,6 +960,37 @@ body {
   }
 }
 
+/* Dark mode styles for Testimonials Section */
+[data-theme="dark"] .testimonials-section {
+  background-color: $color-background-dark; // Dark background color
+
+  .testimonials-title h2 {
+    color: $color-white-dark; 
+  }
+
+  .testimonials-reviews {
+    .testimonial {
+      background-color: $color-secondary-dark; // Dark mode box background
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); // Darken the shadow in dark mode
+
+      p {
+        color: $color-muted-text-dark; 
+      }
+
+      .testimonial-author {
+        .author-info h4 {
+          color: $color-white-dark; 
+        }
+
+        .author-info p {
+          color: $color-muted-text-dark; 
+        }
+      }
+    }
+  }
+}
+
+/* <<Testimonials Section end>> */
 
 
 
@@ -895,21 +998,23 @@ body {
 
 
 
+
+/* <<FAQ Section start>> */
 
 .faq-section {
   display: grid;
-  grid-template-columns: 1fr; // Default for mobile
+  grid-template-columns: 1fr; 
   gap: 2rem;
   padding: 4rem 6rem;
 
   @media (min-width: 1025px) { // Desktop
-    grid-template-columns: 40% 60%; // Split columns for desktop
+    grid-template-columns: 40% 60%; 
     align-items: start;
   }
 
   @media (max-width: 1024px) { // Tablet
-    grid-template-columns: 1fr; // Single column for tablet
-    grid-template-rows: auto auto auto; // 3 rows: header, FAQ, contact options
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto; 
     grid-template-areas: 
       "header"
       "faq"
@@ -919,10 +1024,11 @@ body {
   }
 
   @media (max-width: 768px) { // Mobile
-    grid-template-columns: 1fr; // Single column for mobile
+    grid-template-columns: 1fr; 
   }
 }
 
+/* <<FAQ Header>> */
 .faq-header {
   grid-area: header; // Assigned grid area for tablet
   text-align: start;
@@ -942,15 +1048,30 @@ body {
   @media (min-width: 1025px) { // Desktop
     grid-column: 1;
   }
+
+  @media (max-width: 1024px) { // Tablet
+    text-align: center; 
+    h2, p {
+      margin: 0 auto; 
+    }
+  }
+
+  @media (max-width: 768px) { // Mobile
+    text-align: center; 
+    h2, p {
+      margin: 0 auto; 
+    }
+  }
 }
 
+/* <<FAQ Contact Options>> */
 .faq-contact-options {
   display: flex;
   flex-direction: row;
   gap: 2rem;
   margin-top: 10rem;
   width: 100%;
-  grid-area: contact; // Ensure it's at the bottom in tablet mode
+  grid-area: contact; 
 
   .contact-option {
     flex: 1;
@@ -972,6 +1093,7 @@ body {
       text-decoration: none;
       font-size: 1rem;
       font-weight: bold;
+      
 
       &:after {
         content: "→";
@@ -982,18 +1104,18 @@ body {
       &:hover:after {
         margin-left: 1rem;
       }
-    }
 
-    &:first-child a {
-      color: #4a69bb;
-    }
+      &:first-child a {
+        color: #4a69bb;
+      }
 
-    &:nth-child(2) a {
-      color: #28a745;
-    }
+      &:nth-child(2) a {
+        color: #28a745;
+      }
 
-    &:hover {
-      background-color: #f0f0f0;
+      &:hover {
+        background-color: #f0f0f0;
+      }
     }
   }
 
@@ -1010,8 +1132,9 @@ body {
   }
 }
 
+/* <<FAQ Body>> */
 .faq-body {
-  grid-area: faq; // Assigned grid area for tablet
+  grid-area: faq;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1020,8 +1143,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    
-  
+
     button.faq-question {
       display: flex;
       justify-content: space-between;
@@ -1032,27 +1154,26 @@ body {
       border: none;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       cursor: pointer;
-      font-size: 16px; // Match Figma text size
-      
-      font-weight: 600; // SemiBold weight
-      line-height: 160%; // Line height to match the design
-      letter-spacing: 0px; // No extra spacing
+      font-size: 16px;
+
+      font-weight: 600; 
+      line-height: 160%; 
+      letter-spacing: 0px; 
       color: #000;
-  
+
       img {
         transition: transform 0.3s ease, filter 0.3s ease;
       }
-  
+
       &:hover {
         background-color: #f9f9f9;
       }
-  
+
       &.active img {
         transform: rotate(180deg);
-        
       }
     }
-  
+
     .faq-answer {
       display: none;
       padding: 1rem;
@@ -1060,11 +1181,11 @@ body {
       border-radius: 0.75rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       margin-top: 0.5rem;
-      font-size: 16px; // Match Figma text size
-      font-weight: 400; // Normal weight for the answer text
-      line-height: 160%; // Line height for the answer text
-      letter-spacing: 0px; // No extra spacing
-      color: #6c757d; // Softer color for the answer text
+      font-size: 16px; 
+      font-weight: 400; 
+      line-height: 160%; 
+      letter-spacing: 0px; 
+      color: #6c757d; 
     }
 
     .show {
@@ -1085,6 +1206,7 @@ body {
   }
 }
 
+/* <<Single Contact Button>> */
 .single-contact-btn {
   display: none;
 
@@ -1100,24 +1222,28 @@ body {
   }
 }
 
+/* <<FAQ Section end>> */
 
 
 
 
 
 
+/* <<Newsletter Section start>> */
 
+/* Light mode (default) styles */
 #newsletter {
-  width: 100%; // Make sure the newsletter section takes full width
-  max-width: 1300px; // Set max-width to match Figma's width
-  margin: 0 auto; // Center the entire section
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 50px; // Increased padding for a larger section
-  
+  padding: 40px 50px;
+  background-color: $color-secondary-current;
   border-radius: 12px;
 
+  /* <<Left Section>> */
   .newsletter-left {
     display: flex;
     align-items: center;
@@ -1129,43 +1255,42 @@ body {
     }
 
     p {
-      font-size: 1.25rem; // Slightly larger font size
+      font-size: 1.25rem;
       font-weight: 600;
       line-height: 1.5;
-      color: $color-white-dark;
+      color: $color-text-current; 
     }
   }
 
+  /* <<Right Section>> */
   .newsletter-right {
     .newsletter-form {
       display: flex;
       align-items: center;
 
       input[type="email"] {
-        padding: 15px 50px 15px 45px; // Increased padding for more height
-        border: 1px solid #e5e7eb;
+        padding: 15px 50px 15px 45px;
+        border: 1px solid $color-border-current; 
         border-radius: 8px 0 0 8px;
         font-size: 1rem;
         outline: none;
         transition: border-color 0.3s ease;
-        color: #6b7280;
-        background: url('/img/email-icon.svg') no-repeat 15px center;
-        background-size: 20px;
-        background-color: #fff; // Changed background to white
+        color: $color-muted-text-current; 
+        background-color: $color-background-current; 
 
         &::placeholder {
-          color: #9ca3af;
+          color: $color-muted-text-current; 
         }
 
         &:focus {
-          border-color: #3b82f6;
+          border-color: $color-primary;
         }
       }
 
       button {
-        padding: 15px 40px; // Increased padding for more height
-        background-color: #6366f1;
-        color: white;
+        padding: 15px 40px;
+        background-color: $color-primary;
+        color: $color-white;
         border: none;
         border-radius: 0 8px 8px 0;
         font-size: 1rem;
@@ -1174,13 +1299,13 @@ body {
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #4f46e5;
+          background-color: darken($color-primary, 10%);
         }
       }
     }
   }
 
-  // Responsive Design
+  /* Responsive design */
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
@@ -1200,7 +1325,7 @@ body {
           width: 100%;
           border-radius: 8px;
           margin-bottom: 10px;
-          padding: 15px 15px; // Increased padding for mobile as well
+          padding: 15px 15px;
           background-position: 15px center;
         }
 
@@ -1212,6 +1337,22 @@ body {
     }
   }
 }
+
+/* <<Newsletter Section end>> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
